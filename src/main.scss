@@ -1,0 +1,163 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+$main-font: 'Raleway', sans-serif;
+$details-color: #ff0090;
+$brown: #cc7722;
+$green: #618358;
+$blue: #007fff;
+$grey:#666;
+body {
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  font-size: 10px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.menu__style{
+  box-sizing: border-box;
+  display:flex;
+  background-color: $brown;
+  justify-content: space-between;
+  border-top-left-radius: 1rem ;
+  border-top-right-radius: 1rem;
+}
+.logo__style{
+  color:$grey;
+  font-size: 2.5rem;
+  display:flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin:0;
+  font-weight: lighter;
+
+  font-family: $main-font;
+
+}
+.menu__link{
+  box-sizing: border-box;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style:none;
+  & a{
+    box-sizing: border-box;
+    color:white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 2rem;
+    font-family: $main-font;
+    border-bottom: 3px solid $brown;
+    box-sizing: border-box;
+    &:hover{
+
+      border-bottom:3px solid $details-color;
+      box-sizing: border-box;
+      padding:2rem;
+    }
+
+  }
+}
+
+//form
+
+.section__implement{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-color: #dbe3de;
+}
+.form{
+ display:flex;
+  gap:2rem;
+  & input {
+  padding-top: 0.4rem ;
+  padding-bottom: 0.4rem;
+  border-radius: 0.5rem;
+  border:none;
+}
+}
+.form__heading{
+  color:white;
+  font-size:2rem;
+  font-family: $main-font;
+  padding-top: 10rem;
+}
+
+.form__btn{
+  background-color: $green;
+  color:white;
+  font-family: $main-font;
+
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  border:none
+}
+
+
+//lista
+.list__heading{
+  color:white;
+  font-size:2rem;
+  font-family: $main-font;
+  padding-top: 10rem;
+}
+.book__list{
+  color:$grey;
+  & li{
+    list-style: none;
+    border:1px solid white;
+    font-size: 1.2rem;
+    padding:1rem;
+    font-family: $main-font;
+
+
+  }
+}
+.book__btn{
+  display:flex;
+  gap:2rem;
+  padding:1rem;
+}
+.book__delete-btn{
+  color:white;
+  font-family: $main-font;
+  font-weight: bold;
+  background-color: $blue;
+  border:none;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+.book__read-btn{
+  color:white;
+  font-weight: bold;
+  font-family: $main-font;
+  background-color: $green;
+  border:none;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+//.book__item--read{
+//  text-decoration: line-through;
+//}
+.book__title--read{
+  text-decoration: line-through;
+}
+//footer
+.footer_style{
+  background-color: $brown;
+  border-bottom-left-radius: 1rem ;
+  border-bottom-right-radius: 1rem;
+
+}
