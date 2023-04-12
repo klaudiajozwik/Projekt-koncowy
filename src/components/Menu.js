@@ -12,11 +12,7 @@ function Menu() {
     return (
         <div className="menu__container">
             <h1 className="logo">ReadingJournal</h1>
-            <div className="menu__toggle" onClick={handleMenuClick}>
-                <span className={`menu__bar ${showMenu ? "active" : ""}`}></span>
-                <span className={`menu__bar ${showMenu ? "active" : ""}`}></span>
-                <span className={`menu__bar ${showMenu ? "active" : ""}`}></span>
-            </div>
+
 
             <div className={`menu__link ${showMenu ? "show" : ""}`}>
                 <ul>
@@ -30,6 +26,11 @@ function Menu() {
                         <a href="#last">Ostatnio dodane</a>
                     </li>
                 </ul>
+            </div>
+            <div className="menu__toggle" onClick={handleMenuClick}>
+                <span className={`menu__bar ${showMenu ? "active" : ""}`}></span>
+                <span className={`menu__bar ${showMenu ? "active" : ""}`}></span>
+                <span className={`menu__bar ${showMenu ? "active" : ""}`}></span>
             </div>
         </div>
     );

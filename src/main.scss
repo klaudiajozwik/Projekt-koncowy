@@ -76,7 +76,9 @@ code {
 //hamburger menu na mobile
 @media (max-width: 767px) {
   .menu__container {
-max-width: 100%;
+    display: flex;
+width: 100%;
+    position: absolute;
     .menu__link {
       display: flex;
       flex-direction: column;
@@ -125,19 +127,25 @@ max-width: 100%;
   }
 
   .menu__link {
-    position: absolute;
-    top: 70px;
-    right: 0px;
+    position: relative;
+    top: -150px;
+    right: 0;
     width: 200px;
     background-color: #fff;
     padding: 10px;
-    transform: translateX(100%);
+    //transform: translateX(100%);
     //transform: translateY(100%);
-    transition: all 0.3s ease-in-out;
+    //transition: all 0.3s ease-in-out;
   }
 
   .menu__link.show {
-    transform: translateX(0%);
+    //transform: translateX(0%);
+    width: 100%;
+    top:95px;
+    padding: 1rem;
+    border-radius:1rem;
+
+
   }
 
   .menu__link ul {
@@ -157,6 +165,7 @@ max-width: 100%;
   .menu__link ul li a {
     color: #333;
     text-decoration: none;
+
   }
 }
 
