@@ -207,10 +207,96 @@ code {
   border-radius: 1rem;
   border:none
 }
+//polubione
+.like__container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.like__headind {
+  color:$grey;
+  font-family: $main-font;
+  font-weight:lighter;
+  font-size: 1.2rem;
+}
+.like{
+  background-color: #fff;
+  border-radius:5px;
+  color: $grey;
+}
+
+
+.like__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.like__item {
+  //width: 20rem;
+  //height: 15rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like__item img {
+  //max-width: 100%;
+  //max-height: 70%;
+  height: 20rem;
+  width: 15rem;
+  object-fit: cover;
+}
+
+.like__title {
+  font-size: 1rem;
+  text-align: center;
+}
+// CSS-osttaio dodana
+.last__book-container{
+  display: flex;
+  justify-content: space-between;
+  gap:4rem;
+  align-items: center;
+  margin-top: 50px;
+  background-color: $pink;
+  color:white;
+  padding:2rem;
+  border-radius:20px;
+  font-family: $main-font;
+
+}
+
+.last-book img {
+  width: 100px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.last-book__description {
+  flex-grow: 1;
+}
+
+.last-book__description h3 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.last-book__description p {
+  font-size: 1rem;
+  margin: 0;
+}
 //zdjecia
 .last-add-heading{
-  color:white;
+  color:$grey;
   font-family: $main-font;
+  font-weight: lighter;
+
+
 }
 .last-add-container {
   margin: 30px 0;
@@ -233,7 +319,7 @@ code {
   }
 
   .last-add-book {
-    width: calc(100% / 5 - 20px);
+    //width: calc(100% / 5 - 20px);
     margin:10px;
 
 
