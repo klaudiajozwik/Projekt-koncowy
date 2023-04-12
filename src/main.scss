@@ -9,6 +9,7 @@ $grey:#666;
 $main-color: #dbe3de;
 body {
   margin: 0 auto;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -17,6 +18,7 @@ body {
   font-size: 10px;
   background-color: $main-color;
   max-width: 100%;
+
 }
 
 code {
@@ -76,8 +78,7 @@ code {
 //hamburger menu na mobile
 @media (max-width: 767px) {
   .menu__container {
-    display: flex;
-width: 100%;
+    width: 100%;
     position: absolute;
     .menu__link {
       display: flex;
@@ -308,8 +309,10 @@ width: 100%;
 }
 //footer
 .footer_container{
+  position:absolute;
+  width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   box-sizing: border-box;
   background-color: $brown;
   border-bottom-left-radius: 1rem ;
@@ -319,6 +322,6 @@ width: 100%;
   font-family: $main-font;
   font-weight: lighter;
   font-size: 1.6rem;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 }
