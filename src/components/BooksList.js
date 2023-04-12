@@ -46,14 +46,16 @@ const BooksList = () => {
                         book.read ? "book__item--read" : ""
                     }`}
                 >
-                    <div
-                        className={`book__title ${
-                            book.read ? "book__title--read" : ""
-                        }`}
-                    >
-                        {book.title}
+                    <div className="book__title-container">
+                        <div
+                            className={`book__title ${
+                                book.read ? "book__title--read" : ""
+                            }`}
+                        >
+                            {book.title}
+                        </div>
+                        <div className="book__author">{book.author}</div>
                     </div>
-                    <div className="book__isbn">{book.isbn}</div>
                     <div className={"book__btn"}>
                         <button
                             onClick={() => handleDelete(book.id)}

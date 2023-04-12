@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
 $main-font: 'Raleway', sans-serif;
-$details-color: #ff0090;
-$brown: #cc7722;
-$green: #618358;
-$blue: #007fff;
+$brown: #171B36;
+$green: #09E8B2;
+$pink: #DE7773;
 $grey:#666;
+$main-color: #dbe3de;
 body {
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,56 +14,149 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: white;
   font-size: 10px;
+  background-color: $main-color;
+  max-width: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.menu__style{
-  box-sizing: border-box;
-  display:flex;
+
+.menu__container{
   background-color: $brown;
+  display: flex;
   justify-content: space-between;
-  border-top-left-radius: 1rem ;
+  align-items: center;
   border-top-right-radius: 1rem;
-}
-.logo__style{
-  color:$grey;
-  font-size: 2.5rem;
-  display:flex;
-  align-items: center;
-  padding: 1rem 2rem;
-  margin:0;
-  font-weight: lighter;
+  border-top-left-radius: 1rem;
 
+  .logo{
+  color:$green;
   font-family: $main-font;
-
+  font-weight: lighter;
+  font-size: 2rem;
+  padding: 1rem;
 }
-.menu__link{
-  box-sizing: border-box;
-  display:flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style:none;
-  & a{
-    box-sizing: border-box;
-    color:white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 2rem;
-    font-family: $main-font;
-    border-bottom: 3px solid $brown;
-    box-sizing: border-box;
-    &:hover{
+  .menu__link {
+    padding: 1rem;
+    a {
+      color: white;
+      font-family: $main-font;
+      font-size: 1.6rem;
+      text-transform: uppercase;
 
-      border-bottom:3px solid $details-color;
-      box-sizing: border-box;
-      padding:2rem;
+      &:hover{
+        color:$pink
+      }
+
     }
+  }
+}
+@media (min-width: 768px) {
+  .menu__link ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
+  .menu__link ul li {
+    margin-left: 20px;
+  }
+
+  .menu__link ul li a {
+    color: #333;
+    text-decoration: none;
+  }
+}
+
+//hamburger menu na mobile
+@media (max-width: 767px) {
+  .menu__container {
+max-width: 100%;
+    .menu__link {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      background-color: $brown;
+
+      a {
+        padding: 0;
+        color: white;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .menu__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+    padding:1rem;
+
+  }
+
+
+  .menu__bar {
+    width: 25px;
+    height: 3px;
+    background-color: $green;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  .menu__bar.active:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu__bar.active:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu__bar.active:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .menu__link {
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    width: 200px;
+    background-color: #fff;
+    padding: 10px;
+    transform: translateX(100%);
+    //transform: translateY(100%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu__link.show {
+    transform: translateX(0%);
+  }
+
+  .menu__link ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu__link ul li {
+    margin-top: 10px;
+  }
+
+  .menu__link ul li a {
+    color: #333;
+    text-decoration: none;
   }
 }
 
@@ -75,8 +168,8 @@ code {
   justify-content: center;
   align-items: center;
   //padding-top: 10rem;
-  padding-bottom: 10rem;
-  background-color: #dbe3de;
+  padding-bottom: 5rem;
+  background-color: $main-color;
 }
 .form{
  display:flex;
@@ -103,6 +196,58 @@ code {
   padding: 0.5rem 1.5rem;
   border-radius: 1rem;
   border:none
+}
+//zdjecia
+.last-add-heading{
+  color:white;
+  font-family: $main-font;
+}
+.last-add-container {
+  margin: 30px 0;
+  padding:1rem;
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+
+  .last-add-heading {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .last-add-books {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 5px;
+
+  }
+
+  .last-add-book {
+    width: calc(100% / 5 - 20px);
+    margin:10px;
+
+
+
+
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+
+    img {
+      width: 15rem;
+      height: 20rem;
+
+    }
+  }
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+  .last-add-books {
+    flex-direction: column;
+  }
 }
 
 
@@ -134,7 +279,7 @@ code {
   color:white;
   font-family: $main-font;
   font-weight: bold;
-  background-color: $blue;
+  background-color: $pink;
   border:none;
   border-radius: 0.5rem;
   padding: 0.2rem 0.5rem;
@@ -148,16 +293,23 @@ code {
   border-radius: 0.5rem;
   padding: 0.2rem 0.5rem;
 }
-//.book__item--read{
-//  text-decoration: line-through;
-//}
+
 .book__title--read{
   text-decoration: line-through;
 }
 //footer
-.footer_style{
+.footer_container{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   background-color: $brown;
   border-bottom-left-radius: 1rem ;
   border-bottom-right-radius: 1rem;
-
+.logo_footer{
+  color:$green;
+  font-family: $main-font;
+  font-weight: lighter;
+  font-size: 1.6rem;
+  padding: 2rem;
+}
 }
