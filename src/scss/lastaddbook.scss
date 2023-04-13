@@ -3,7 +3,7 @@
   justify-content: space-between;
   gap:4rem;
   align-items: center;
-  margin-top: 50px;
+  margin: 5rem;
   background-color: $pink;
   color:white;
   padding:2rem;
@@ -39,12 +39,14 @@
     align-items: stretch;
     gap: 2rem;
     padding: 1rem;
+    margin:5rem 0;
     img {
       margin: 0;
       margin-bottom: 1rem;
       align-self: center;
       width: 15rem;
       height: 20rem;
+
     }
   }
 

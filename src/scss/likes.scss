@@ -4,10 +4,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 1000px;
-  overflow: hidden;
+
 }
-.like__headind {
+.like__heading {
   color:white;
   font-family: $main-font;
   font-size: 1.2rem;
@@ -41,6 +40,7 @@
   height: 20rem;
   width: 15rem;
   object-fit: cover;
+
 }
 
 .like__title {
