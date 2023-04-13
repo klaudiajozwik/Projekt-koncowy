@@ -1,0 +1,54 @@
+.like__container {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  overflow: hidden;
+}
+.like__headind {
+  color:white;
+  font-family: $main-font;
+  font-size: 1.2rem;
+  padding: 4rem;
+}
+.like{
+  background-color: #fff;
+  border-radius:5px;
+  color: $grey;
+}
+
+
+.like__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.like__item {
+  //width: 20rem;
+  //height: 15rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like__item img {
+  height: 20rem;
+  width: 15rem;
+  object-fit: cover;
+}
+
+.like__title {
+  font-size: 1rem;
+  text-align: center;
+}
+.like__empty{
+  padding:1rem;
+  color:$grey;
+  font-size: 1.2rem;
+}

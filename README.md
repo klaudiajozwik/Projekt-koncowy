@@ -1,6 +1,10 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Title
+
+A brief description of what this project does and who it's for
+Application Documentation
+The application is a React application that allows the user to search for books using their ISBN number and add them to a list. The user can also mark the books as read or delete them from the list.
 
 ## Available Scripts
 
@@ -45,26 +49,16 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Components
+The application has two main components:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### BookInfo
+The BookInfo component is responsible for rendering the form that allows the user to search for books using ISBN number and displaying the list of books. It also manages the state of the application, including the list of books and the validity of the ISBN number.
 
-### Analyzing the Bundle Size
+### BooksList
+The BooksList component is responsible for rendering the list of books and handling the user's interaction with the list, such as marking the books as read or deleting them.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Backend
+The application uses Firebase as a backend to store the list of books. When the user adds a new book, the application sends a request to the Google Books API to fetch the book's details using the ISBN number. If the book is found, its details are added to the Firebase database.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+When the BooksList component mounts, it fetches the list of books from Firebase and sets the state of the BookInfo component. When the user marks a book as read or deletes it from the list, the application updates the Firebase database and updates the state of the BookInfo component.

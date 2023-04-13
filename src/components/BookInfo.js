@@ -24,8 +24,6 @@ const BookInfo = () => {
         };
         getBooksFromFirestore();
     }, []);
-
-
     const handleSubmit = async (event) => {
         event.preventDefault();
         const response = await fetch(
@@ -43,18 +41,51 @@ const BookInfo = () => {
             const isbn = isbnList[isbnList.length - 1];
             const imageLink = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : "";
             const description = book.volumeInfo.description || "";
+            const timestamp = new Date().toISOString();
             const docRef = await addDoc(collection(firestore, "books"), {
                 title,
                 isbn,
                 author,
                 imageLink,
-                description
+                description,
+                timestamp
             });
             console.log("Document written with ID: ", docRef.id);
-            setBookList([...bookList, { id: docRef.id, title, isbn, author, imageLink, description }]);
+            setBookList([...bookList, { id: docRef.id, title, isbn, author, imageLink, description, timestamp }]);
         }
         setIsbnList([]);
     };
+
+
+    // const handleSubmit = async (event) => {
+    //     event.preventDefault();
+    //     const response = await fetch(
+    //         `https://www.googleapis.com/books/v1/volumes?q=isbn:${isbnList[isbnList.length - 1]}`
+    //     );
+    //     const data = await response.json();
+    //     if (data.totalItems === 0) {
+    //         setIsValidISBN(false);
+    //     } else {
+    //         setIsValidISBN(true);
+    //         const book = data.items[0];
+    //         const title = book.volumeInfo.title;
+    //         const authors = book.volumeInfo.authors || [];
+    //         const author = authors.join(", ");
+    //         const isbn = isbnList[isbnList.length - 1];
+    //         const imageLink = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : "";
+    //         const description = book.volumeInfo.description || "";
+    //         const docRef = await addDoc(collection(firestore, "books"), {
+    //             title,
+    //             isbn,
+    //             author,
+    //             imageLink,
+    //             description
+    //         });
+    //         console.log("Document written with ID: ", docRef.id);
+    //         setBookList([...bookList, { id: docRef.id, title, isbn, author, imageLink, description }]);
+    //     }
+    //     setIsbnList([]);
+    // };
 
     return (
 

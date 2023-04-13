@@ -1,0 +1,36 @@
+
+.section__implement{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //padding-top: 10rem;
+  padding-bottom: 5rem;
+  background-color: $main-color;
+}
+.form{
+  display:flex;
+  gap:2rem;
+  & input {
+    padding-top: 0.4rem ;
+    padding-bottom: 0.4rem;
+    border-radius: 0.5rem;
+    border:none;
+  }
+}
+.form__heading{
+  color:white;
+  font-size:2rem;
+  font-family: $main-font;
+  padding-top: 10rem;
+}
+
+.form__btn{
+  background-color: $green;
+  color:white;
+  font-family: $main-font;
+
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  border:none
+}

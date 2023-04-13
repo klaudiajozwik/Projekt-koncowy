@@ -1,0 +1,45 @@
+.list__heading{
+  color:white;
+  font-size:2rem;
+  font-family: $main-font;
+  padding-top: 10rem;
+}
+.book__list{
+  color:$grey;
+  & li{
+    list-style: none;
+    border:1px solid white;
+    font-size: 1.2rem;
+    padding:1rem;
+    font-family: $main-font;
+
+
+  }
+}
+.book__btn{
+  display:flex;
+  gap:2rem;
+  padding:1rem;
+}
+.book__delete-btn{
+  color:white;
+  font-family: $main-font;
+  font-weight: bold;
+  background-color: $pink;
+  border:none;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+.book__read-btn{
+  color:white;
+  font-weight: bold;
+  font-family: $main-font;
+  background-color: $green;
+  border:none;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.book__title--read{
+  text-decoration: line-through;
+}

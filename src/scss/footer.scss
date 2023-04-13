@@ -1,0 +1,17 @@
+.footer_container{
+  position:absolute;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: $brown;
+  border-bottom-left-radius: 1rem ;
+  border-bottom-right-radius: 1rem;
+  .logo_footer{
+    color:$green;
+    font-family: $main-font;
+    font-weight: lighter;
+    font-size: 1.6rem;
+    padding: 1.5rem;
+  }
+}

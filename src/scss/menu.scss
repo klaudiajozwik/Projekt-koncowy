@@ -1,0 +1,144 @@
+
+.menu__container{
+  background-color: $brown;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+
+  .logo{
+    color:$green;
+    font-family: $main-font;
+    font-weight: lighter;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .menu__link {
+    padding: 1rem;
+    a {
+      color: white;
+      font-family: $main-font;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+
+      &:hover{
+        color:$pink
+      }
+
+    }
+  }
+}
+@media (min-width: 768px) {
+  .menu__link ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu__link ul li {
+    margin-left: 20px;
+  }
+
+  .menu__link ul li a {
+    color: #333;
+    text-decoration: none;
+  }
+}
+
+//hamburger menu na mobile
+@media (max-width: 767px) {
+  .menu__container {
+    width: 100%;
+    position: absolute;
+    .menu__link {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      background-color: $brown;
+
+      a {
+        padding: 0;
+        color: white;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .menu__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+    padding:1rem;
+
+  }
+
+
+  .menu__bar {
+    width: 25px;
+    height: 3px;
+    background-color: $green;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  .menu__bar.active:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu__bar.active:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu__bar.active:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .menu__link {
+    position: relative;
+    top: -150px;
+    right: 0;
+    width: 200px;
+    background-color: #fff;
+    padding: 10px;
+    //transform: translateX(100%);
+    //transform: translateY(100%);
+    //transition: all 0.3s ease-in-out;
+  }
+
+  .menu__link.show {
+    //transform: translateX(0%);
+    width: 100%;
+    top:95px;
+    padding: 1rem;
+    border-radius:1rem;
+
+
+  }
+
+  .menu__link ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu__link ul li {
+    margin-top: 10px;
+  }
+
+  .menu__link ul li a {
+    color: #333;
+    text-decoration: none;
+
+  }
+}

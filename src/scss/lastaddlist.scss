@@ -1,0 +1,54 @@
+.last-add-heading{
+  color:white;
+  font-family: $main-font;
+  //font-weight: lighter;
+  padding-bottom:4rem;
+
+
+}
+.last-add-container {
+  margin: 3rem 0;
+  padding:1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .last-add-heading {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .last-add-books {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 5px;
+
+  }
+
+  .last-add-book {
+    padding: 0.5rem;
+
+
+
+
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+
+    img {
+      width: 15rem;
+      height: 20rem;
+
+    }
+  }
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+  .last-add-books {
+    flex-direction: column;
+  }
+}

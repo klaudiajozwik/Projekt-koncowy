@@ -1,9 +1,15 @@
+
 import React, { useContext } from "react";
 import { BooksContext } from "./BookInfo";
 
 const LastBook = () => {
     const { bookList } = useContext(BooksContext);
-    const lastBook = bookList[bookList.length - 1];
+
+
+    bookList.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+
+    const lastBook = bookList[0];
 
     if (!lastBook) {
         return null;
