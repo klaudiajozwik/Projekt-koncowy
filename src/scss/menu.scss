@@ -53,11 +53,14 @@
   .menu__container {
     width: 100%;
     position: absolute;
+    z-index: 1;
+
     .menu__link {
       display: flex;
       flex-direction: column;
       padding: 0;
       background-color: $brown;
+
 
       a {
         padding: 0;
@@ -74,13 +77,15 @@
     align-items: center;
     cursor: pointer;
     flex-direction: column;
-    padding:1rem;
+    //padding:1rem;
+    margin-right: 1rem;
+    z-index: 2;
 
   }
 
 
   .menu__bar {
-    width: 25px;
+    width: 40px;
     height: 3px;
     background-color: $green;
     margin: 5px;
@@ -88,17 +93,26 @@
 
   }
 
+
+
+  .menu__bar.active:nth-child(1) {
+    position: absolute;
+    transform: translate(-50%, -50%)rotate(45deg);
+
+
+  }
+
   .menu__bar.active:nth-child(2) {
     opacity: 0;
   }
 
-  .menu__bar.active:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+  .menu__bar.active:nth-child(3) {
+
+    position: absolute;
+    transform: translate(-50%, -50%)rotate(135deg);
+
   }
 
-  .menu__bar.active:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
 
   .menu__link {
     position: relative;
@@ -115,9 +129,11 @@
   .menu__link.show {
     //transform: translateX(0%);
     width: 100%;
-    top:95px;
+    top:8rem;
+    right: -4.1rem;
     padding: 1rem;
-    border-radius:1rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
 
   }
