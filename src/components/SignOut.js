@@ -16,9 +16,9 @@ export default function User() {
 
     return (
         <>
-            <div className="container">
-                {/*<h1>Welcome {user?.email}</h1>*/}
-                <button onClick={() => signOut(firebaseAuth)} className={"btn_signout"}>Wyloguj</button>
+            <div className="container__signout">
+                {/*<h3>Witaj {user?.email}</h3>*/}
+                <button onClick={() => signOut(firebaseAuth)} className={"btn__signout"}>Wyloguj</button>
             </div>
         </>
     );

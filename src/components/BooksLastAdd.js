@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { BooksContext } from "./BookInfo";
-import { Link, Element } from 'react-scroll';
+import {Element } from 'react-scroll';
 
 const BooksLastAdd = () => {
     const { bookList } = useContext(BooksContext);

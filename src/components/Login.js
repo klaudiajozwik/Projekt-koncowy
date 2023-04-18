@@ -21,7 +21,7 @@ export default function Login() {
     });
 
     return (
-        <>
+        <div className={"login__container"}>
             <div className="menu__container">
                 <h1 className="logo">ReadingJournal</h1>
             </div>
@@ -46,6 +46,6 @@ export default function Login() {
           </span>
                 </div>
             </div>
-        </>
+        </div>
     );
 };

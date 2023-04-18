@@ -1,4 +1,3 @@
-
 import {
     createUserWithEmailAndPassword,
     onAuthStateChanged,
@@ -25,7 +24,7 @@ export default function SignUp() {
     });
 
     return (
-        <>
+        <div className={"signup__container"}>
             <div className="menu__container">
                 <h1 className="logo">ReadingJournal</h1>
             </div>
@@ -50,6 +49,6 @@ export default function SignUp() {
           </span>
                 </div>
             </div>
-        </>
+        </div>
     );
 };

@@ -16,8 +16,7 @@
   }
   .menu__link {
     padding: 1rem;
-    //a
-    li {
+    a {
       color: white;
       font-family: $main-font;
       font-size: 1.6rem;
@@ -42,8 +41,8 @@
   .menu__link ul li {
     margin-left: 20px;
   }
-//a
-  .menu__link ul li  {
+
+  .menu__link ul li a {
     color: #333;
     text-decoration: none;
   }
@@ -62,8 +61,8 @@
       padding: 0;
       background-color: $brown;
 
-//a
-      li {
+
+      a {
         padding: 0;
         color: white;
         font-size: 1.2rem;
@@ -78,6 +77,7 @@
     align-items: center;
     cursor: pointer;
     flex-direction: column;
+    //padding:1rem;
     margin-right: 1rem;
     z-index: 2;
 
@@ -121,10 +121,13 @@
     width: 200px;
     background-color: #fff;
     padding: 10px;
-
+    //transform: translateX(100%);
+    //transform: translateY(100%);
+    //transition: all 0.3s ease-in-out;
   }
 
   .menu__link.show {
+    //transform: translateX(0%);
     width: 100%;
     top:8rem;
     right: -4.1rem;
@@ -148,12 +151,21 @@
   .menu__link ul li {
     margin-top: 10px;
   }
-//a
-  .menu__link ul li  {
+
+  .menu__link ul li a {
     color: #333;
     text-decoration: none;
 
   }
 }
 
-
+.btn_signout{
+  background-color: $green;
+  color:white;
+  padding: 0.5rem 1rem;
+  border-radius:2rem;
+  border:none;
+  font-family: $main-font;
+  font-size: 1rem;
+  margin-right: 1rem;
+}

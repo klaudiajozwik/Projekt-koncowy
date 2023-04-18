@@ -1,11 +1,9 @@
-
 import React, { useState, useEffect, createContext } from "react";
-import { Link, Element } from 'react-scroll';
 import BooksList from './BooksList'
 import BooksLastAdd from "./BooksLastAdd";
 import Like from "./Like";
 import BookLast from "./BookLast";
-
+import {Element } from 'react-scroll';
 import {firestore} from "../firebase";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 
@@ -80,7 +78,7 @@ const BookInfo = () => {
                     </label>
                     <button  className={"form__btn"} type="submit">Szukaj</button>
                 </form>
-                </Element>
+                    </Element>
                 {!isValidISBN && <h3>Numer ISBN jest niepoprawny.</h3>}
                 <BookLast/>
                 <BooksLastAdd />

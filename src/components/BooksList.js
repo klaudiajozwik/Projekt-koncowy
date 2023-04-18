@@ -1,11 +1,10 @@
-
-import React, { useContext, useEffect, useState } from "react";
-import { Link, Element } from 'react-scroll';
+import React, { useContext, useEffect } from "react";
 import { BooksContext } from "./BookInfo";
 import { collection, getDocs, deleteDoc, doc, updateDoc, setDoc } from "firebase/firestore";
 import { firestore } from "../firebase";
 import { faHeart, faHeartBroken } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Element } from 'react-scroll';
 
 const BooksList = () => {
     const {bookList, setBookList} = useContext(BooksContext);
@@ -56,6 +55,7 @@ const BooksList = () => {
     });
 
     return (
+
         <Element name="list">
 
         <ul className="book__list">
