@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import SignOut from "./SignOut";
 
 
 function Menu() {
@@ -32,6 +33,7 @@ function Menu() {
                 <span className={`menu__bar ${showMenu ? "active" : ""}`}></span>
                 <span className={`menu__bar ${showMenu ? "active" : ""}`}></span>
             </div>
+            <SignOut/>
         </div>
     );
 }
