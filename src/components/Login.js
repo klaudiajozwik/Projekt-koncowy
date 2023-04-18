@@ -27,13 +27,13 @@ export default function Login() {
             </div>
             <div className="container__login">
                 <h2>Logowanie</h2>
-                <input
+                <input className={"input"}
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Email"
                 />
-                <input
+                <input className={"input"}
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}

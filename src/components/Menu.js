@@ -1,5 +1,5 @@
-
 import { useState } from "react";
+import { Link, Element } from 'react-scroll';
 import SignOut from "./SignOut";
 
 
@@ -16,15 +16,26 @@ function Menu() {
 
 
             <div className={`menu__link ${showMenu ? "show" : ""}`}>
+                {/*<ul>*/}
+                {/*    <li>*/}
+                {/*        <a href="#add">Dodaj </a>*/}
+                {/*    </li>*/}
+                {/*    <li>*/}
+                {/*        <a href="#list">lista</a>*/}
+                {/*    </li>*/}
+                {/*    <li>*/}
+                {/*        <a href="#last">Ostatnio dodane</a>*/}
+                {/*    </li>*/}
+                {/*</ul>*/}
                 <ul>
                     <li>
-                        <a href="#add">Dodaj </a>
+                        <Link to="add" smooth={true} duration={500}>Dodaj</Link>
                     </li>
                     <li>
-                        <a href="#list">lista</a>
+                        <Link to="list" smooth={true} duration={500}>Lista</Link>
                     </li>
                     <li>
-                        <a href="#last">Ostatnio dodane</a>
+                        <Link to="last" smooth={true} duration={500}>Ostatnio dodane</Link>
                     </li>
                 </ul>
             </div>

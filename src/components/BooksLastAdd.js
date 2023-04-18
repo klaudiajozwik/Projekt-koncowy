@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { BooksContext } from "./BookInfo";
+import { Link, Element } from 'react-scroll';
 
 const BooksLastAdd = () => {
     const { bookList } = useContext(BooksContext);
@@ -10,6 +11,7 @@ const BooksLastAdd = () => {
         .slice(0, 5);
 
     return (
+        <Element name="last">
         <div className="last-add-container">
             <h2 className="last-add-heading" id={"last"}>
                 Ostatnio dodane książki
@@ -22,6 +24,7 @@ const BooksLastAdd = () => {
                 ))}
             </div>
         </div>
+</Element>
     );
 };
 

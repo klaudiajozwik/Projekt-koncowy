@@ -31,17 +31,17 @@ export default function SignUp() {
             </div>
             <div className="container__signup">
                 <h2>Załóż konto</h2>
-                <input
+                <input className={"input"}
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Email"
                 />
-                <input
+                <input className={"input"}
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
+                    placeholder="Hasło"
                 />
                 <div className="container__button">
                     <button onClick={handleSignIn} className={"btn__signup"}>Zarejestruj</button>

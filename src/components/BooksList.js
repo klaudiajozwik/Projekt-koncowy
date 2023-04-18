@@ -1,5 +1,6 @@
 
 import React, { useContext, useEffect, useState } from "react";
+import { Link, Element } from 'react-scroll';
 import { BooksContext } from "./BookInfo";
 import { collection, getDocs, deleteDoc, doc, updateDoc, setDoc } from "firebase/firestore";
 import { firestore } from "../firebase";
@@ -55,6 +56,8 @@ const BooksList = () => {
     });
 
     return (
+        <Element name="list">
+
         <ul className="book__list">
             {bookList.map((book) => (
                 <li
@@ -94,6 +97,7 @@ const BooksList = () => {
                 </li>
             ))}
         </ul>
+        </Element>
     )
 };
 export default BooksList

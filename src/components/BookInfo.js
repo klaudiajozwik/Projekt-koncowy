@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect, createContext } from "react";
+import { Link, Element } from 'react-scroll';
 import BooksList from './BooksList'
 import BooksLastAdd from "./BooksLastAdd";
 import Like from "./Like";
@@ -57,41 +58,14 @@ const BookInfo = () => {
     };
 
 
-    // const handleSubmit = async (event) => {
-    //     event.preventDefault();
-    //     const response = await fetch(
-    //         `https://www.googleapis.com/books/v1/volumes?q=isbn:${isbnList[isbnList.length - 1]}`
-    //     );
-    //     const data = await response.json();
-    //     if (data.totalItems === 0) {
-    //         setIsValidISBN(false);
-    //     } else {
-    //         setIsValidISBN(true);
-    //         const book = data.items[0];
-    //         const title = book.volumeInfo.title;
-    //         const authors = book.volumeInfo.authors || [];
-    //         const author = authors.join(", ");
-    //         const isbn = isbnList[isbnList.length - 1];
-    //         const imageLink = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : "";
-    //         const description = book.volumeInfo.description || "";
-    //         const docRef = await addDoc(collection(firestore, "books"), {
-    //             title,
-    //             isbn,
-    //             author,
-    //             imageLink,
-    //             description
-    //         });
-    //         console.log("Document written with ID: ", docRef.id);
-    //         setBookList([...bookList, { id: docRef.id, title, isbn, author, imageLink, description }]);
-    //     }
-    //     setIsbnList([]);
-    // };
+
 
     return (
 
         <BooksContext.Provider value={{ bookList, setBookList }}>
             <div className={"section__implement"}>
                 <h2 className={"form__heading"} id={"add"}> Wprowadź numer ISBN</h2>
+                <Element name="add">
                 <form className={"form"} onSubmit={handleSubmit}>
                     <label style={{color:"white"} }>
 
@@ -106,6 +80,7 @@ const BookInfo = () => {
                     </label>
                     <button  className={"form__btn"} type="submit">Szukaj</button>
                 </form>
+                </Element>
                 {!isValidISBN && <h3>Numer ISBN jest niepoprawny.</h3>}
                 <BookLast/>
                 <BooksLastAdd />
