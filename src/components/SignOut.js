@@ -6,7 +6,7 @@ import { firebaseAuth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 
 export default function User() {
-    const [user, setUser] = useState(undefined);
+    const [setUser] = useState(undefined);
     const navigate = useNavigate();
 
     onAuthStateChanged(firebaseAuth, (currentUser) => {

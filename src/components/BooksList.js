@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { BooksContext } from "./BookInfo";
-import { collection, getDocs, deleteDoc, doc, updateDoc, setDoc } from "firebase/firestore";
+import { collection, getDocs, deleteDoc, doc, updateDoc } from "firebase/firestore";
 import { firestore } from "../firebase";
 import { faHeart, faHeartBroken } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

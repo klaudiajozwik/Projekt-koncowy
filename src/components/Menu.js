@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import SignOut from "./SignOut";
 import { Link } from "react-scroll";
 
 function Menu() {
