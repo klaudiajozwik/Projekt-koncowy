@@ -21,8 +21,10 @@
     "react-scripts": "^4.0.3",
     "react-scroll": "^1.8.9",
     "reactfire": "^4.2.2",
-    "sass": "^1.59.3",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "sass": "^1.59.3"
   },
   "scripts": {
     "start": "react-scripts start",

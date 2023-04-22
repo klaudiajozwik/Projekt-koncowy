@@ -3,17 +3,11 @@ import BookInfo from "./BookInfo";
 import Menu from "./Menu"
 import Footer from "./Footer";
 
-
-
-
-
-
 const Home = () => {
 
     return(
         <>
             <Menu/>
-
             <BookInfo/>
             <Footer/>
 
